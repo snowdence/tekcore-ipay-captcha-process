@@ -61,6 +61,8 @@ app.post("/process-captcha-svg", (req, res) => {
         message: "Thất bại",
       });
     }
+
+    console.log(buffer)
     var base64data = new Buffer(buffer).toString("base64");
     res.json({
       success: true,
